@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.038,D:\Projects\delphi_projects\FTSM\Unit1.pas=D:\Projects\delphi_projects\FTSM\UnitCustomers.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.997,=D:\Projects\delphi_projects\FTSM\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.024,=C:\Users\Yel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.200,C:\Users\Yel\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\Projects\delphi_projects\FTSM\Main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.630,D:\Projects\delphi_projects\FTSM\UnitTranslators.pas=D:\Projects\delphi_projects\FTSM\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.630,D:\Projects\delphi_projects\FTSM\UnitTranslators.dfm=D:\Projects\delphi_projects\FTSM\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.200,C:\Users\Yel\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Projects\delphi_projects\FTSM\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.423,C:\Users\Yel\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\Projects\delphi_projects\FTSM\ftsm.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.038,D:\Projects\delphi_projects\FTSM\Unit1.dfm=D:\Projects\delphi_projects\FTSM\UnitCustomers.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.145,=D:\Projects\delphi_projects\FTSM\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

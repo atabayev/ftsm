@@ -1,0 +1,63 @@
+object FormTranslators: TFormTranslators
+  Left = 0
+  Top = 0
+  Caption = #1055#1077#1088#1077#1074#1086#1076#1095#1080#1082#1080
+  ClientHeight = 603
+  ClientWidth = 1100
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1100
+    Height = 603
+    Align = alClient
+    TabOrder = 0
+    object lvTrasnlators: TListView
+      Left = 1
+      Top = 1
+      Width = 1098
+      Height = 601
+      Align = alClient
+      Columns = <>
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Consolas'
+      Font.Style = []
+      GridLines = True
+      ReadOnly = True
+      RowSelect = True
+      ParentFont = False
+      TabOrder = 0
+      ViewStyle = vsReport
+    end
+  end
+  object TranslatorHttp: TIdHTTP
+    AllowCookies = True
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    Left = 840
+    Top = 8
+  end
+end
