@@ -93,6 +93,7 @@ type
     edComment: TEdit;
     cbTranslatinglang: TComboBox;
     edPriceToTranslator: TEdit;
+    Button4: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure edPasswordKeyPress(Sender: TObject; var Key: Char);
@@ -120,6 +121,7 @@ type
     procedure btnAddLanguageClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
     procedure LoadConfigs;
@@ -635,6 +637,42 @@ begin
     lbTrsLangs.Items.Delete(lbTrsLangs.ItemIndex);
 end;
 
+procedure TFormMain.Button4Click(Sender: TObject);
+var
+    Result: string;
+    Data: TIdMultiPartFormDataStream;
+    Json: TJSONObject;
+begin
+    Data := TIdMultiPartFormDataStream.Create;
+    Data.AddFormField('username', edLogin.Text, 'utf-8').ContentTransfer:='8bit';
+    Data.AddFormField('password', edPassword.Text, 'utf-8').ContentTransfer:='8bit';
+    Data.AddFormField('name', 'Ельдос', 'utf-8').ContentTransfer:='8bit';
+    Data.AddFormField('surname', 'Атабаев', 'utf-8').ContentTransfer:='8bit';
+    Data.AddFormField('email', 'E1dos@mail.ru', 'utf-8').ContentTransfer:='8bit';
+    Data.AddFormField('phone', '7055552402', 'utf-8').ContentTransfer:='8bit';
+    Data.AddFormField('pswd', 'for_add', 'utf-8').ContentTransfer:='8bit';
+    try
+        try
+            Result := http.Post(URL + '/management/new/', Data)
+        except on E: Exception do
+            begin
+                ShowMessage('Нет связи с сервером');
+                TimerUpdate.Enabled := false;
+                Exit;
+            end;
+        end;
+    finally
+        Data.Free;
+    end;
+    json := TJSONObject.ParseJSONValue(result) as TJSONObject;
+    if json.GetValue('response').Value = 'ok' then begin
+        Username := edLogin.Text;
+        mid := json.GetValue('id').Value;
+    end
+    else if json.GetValue('response').Value = 'denied' then
+        MessageDlg('Доступ запрещен!', mtWarning, [mbOk], 0);
+end;
+
 procedure TFormMain.PanelOrderingHide;
 begin
     PanelOrdering.Visible := False;
@@ -701,6 +739,7 @@ begin
         dpDateFinish.Date:= StrToDate(MainTable.Selected.SubItems.Strings[4]);
         cbDirection.Enabled := False;
         edPriceToClient.Enabled := False;
+        edPriceToTranslator.Enabled := False;
         edPages.Enabled := False;
         cbTranslatinglang.Enabled := False;
     end;

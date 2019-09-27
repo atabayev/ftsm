@@ -198,7 +198,7 @@ object FormMain: TFormMain
             Font.Style = []
             ParentFont = False
             ReadOnly = True
-            TabOrder = 1
+            TabOrder = 8
           end
           object edLanguage: TEdit
             Left = 232
@@ -212,7 +212,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 2
+            TabOrder = 9
           end
           object edDateStart: TEdit
             Left = 232
@@ -226,7 +226,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 3
+            TabOrder = 10
           end
           object edPages: TEdit
             Left = 232
@@ -239,7 +239,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 4
+            TabOrder = 2
           end
           object edFilesCount: TEdit
             Left = 232
@@ -267,7 +267,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 6
+            TabOrder = 11
           end
           object edTranslator: TEdit
             Left = 232
@@ -281,7 +281,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 7
+            TabOrder = 12
           end
           object edCustomer: TEdit
             Left = 232
@@ -295,7 +295,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 8
+            TabOrder = 13
           end
           object edPriceToClient: TEdit
             Left = 232
@@ -308,7 +308,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 9
+            TabOrder = 6
           end
           object dpDateFinish: TDatePicker
             Left = 232
@@ -322,7 +322,7 @@ object FormMain: TFormMain
             Font.Height = -13
             Font.Name = 'Consolas'
             Font.Style = []
-            TabOrder = 10
+            TabOrder = 3
           end
           object cbDirection: TComboBox
             Left = 232
@@ -335,7 +335,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 11
+            TabOrder = 4
             Text = #1058#1077#1084#1072#1090#1080#1082#1072
             OnSelect = cbDirectionSelect
           end
@@ -351,7 +351,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 12
+            TabOrder = 14
           end
           object cbTranslatinglang: TComboBox
             Left = 232
@@ -364,7 +364,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 13
+            TabOrder = 1
             Text = #1042#1099#1073#1077#1088#1080#1090#1077' '#1103#1079#1099#1082
             OnSelect = cbDirectionSelect
           end
@@ -379,7 +379,7 @@ object FormMain: TFormMain
             Font.Name = 'Consolas'
             Font.Style = []
             ParentFont = False
-            TabOrder = 14
+            TabOrder = 7
           end
         end
       end
@@ -642,6 +642,8 @@ object FormMain: TFormMain
     Width = 1343
     Height = 19
     Panels = <>
+    ExplicitLeft = -398
+    ExplicitTop = 789
   end
   object PanelAuth: TPanel
     Left = 569
@@ -710,10 +712,19 @@ object FormMain: TFormMain
       TabOrder = 2
       OnKeyPress = edPasswordKeyPress
     end
+    object Button4: TButton
+      Left = 344
+      Top = 101
+      Width = 75
+      Height = 25
+      Caption = 'Button4'
+      TabOrder = 3
+      OnClick = Button4Click
+    end
   end
   object PanelAddTranslator: TPanel
-    Left = 303
-    Top = 77
+    Left = 623
+    Top = 83
     Width = 345
     Height = 590
     TabOrder = 3
@@ -803,7 +814,7 @@ object FormMain: TFormMain
       Font.Name = 'Consolas'
       Font.Style = []
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 1
     end
     object ledSurname: TLabeledEdit
       Left = 20
@@ -825,7 +836,7 @@ object FormMain: TFormMain
       Font.Name = 'Consolas'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 2
     end
     object ledEmail: TLabeledEdit
       Left = 20
@@ -847,7 +858,7 @@ object FormMain: TFormMain
       Font.Name = 'Consolas'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 4
     end
     object Button1: TButton
       Left = 69
@@ -861,7 +872,7 @@ object FormMain: TFormMain
       Font.Name = 'Consolas'
       Font.Style = []
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 10
       OnClick = Button1Click
     end
     object ledUsername: TLabeledEdit
@@ -884,7 +895,7 @@ object FormMain: TFormMain
       Font.Name = 'Consolas'
       Font.Style = []
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 7
     end
     object ledPassword: TLabeledEdit
       Left = 20
@@ -906,7 +917,7 @@ object FormMain: TFormMain
       Font.Name = 'Consolas'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 8
     end
     object lbTrsDirecs: TListBox
       Left = 20
@@ -914,7 +925,7 @@ object FormMain: TFormMain
       Width = 273
       Height = 56
       ItemHeight = 13
-      TabOrder = 6
+      TabOrder = 11
     end
     object btnAddDirection: TButton
       Left = 296
@@ -922,7 +933,7 @@ object FormMain: TFormMain
       Width = 26
       Height = 21
       Caption = '+'
-      TabOrder = 7
+      TabOrder = 9
       OnClick = btnAddDirectionClick
     end
     object cbTrDirect: TComboBox
@@ -930,7 +941,7 @@ object FormMain: TFormMain
       Top = 242
       Width = 273
       Height = 21
-      TabOrder = 8
+      TabOrder = 5
       Text = #1058#1077#1084#1072#1090#1080#1082#1072
     end
     object ledPhone: TMaskEdit
@@ -946,7 +957,7 @@ object FormMain: TFormMain
       Font.Style = []
       MaxLength = 13
       ParentFont = False
-      TabOrder = 9
+      TabOrder = 3
       Text = '(   )   -    '
     end
     object lbTrsLangs: TListBox
@@ -955,14 +966,14 @@ object FormMain: TFormMain
       Width = 273
       Height = 56
       ItemHeight = 13
-      TabOrder = 10
+      TabOrder = 12
     end
     object cbTrLangs: TComboBox
       Left = 20
       Top = 347
       Width = 273
       Height = 21
-      TabOrder = 11
+      TabOrder = 6
       Text = #1071#1079#1099#1082#1080
     end
     object btnAddLanguage: TButton
@@ -971,7 +982,7 @@ object FormMain: TFormMain
       Width = 26
       Height = 21
       Caption = '+'
-      TabOrder = 12
+      TabOrder = 0
       OnClick = btnAddLanguageClick
     end
     object Button2: TButton
