@@ -2,8 +2,8 @@ object FormTranslators: TFormTranslators
   Left = 0
   Top = 0
   Caption = #1055#1077#1088#1077#1074#1086#1076#1095#1080#1082#1080
-  ClientHeight = 603
-  ClientWidth = 1100
+  ClientHeight = 645
+  ClientWidth = 1264
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,15 +19,17 @@ object FormTranslators: TFormTranslators
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1100
-    Height = 603
+    Width = 1264
+    Height = 645
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 1100
+    ExplicitHeight = 603
     object lvTrasnlators: TListView
       Left = 1
       Top = 1
-      Width = 1098
-      Height = 601
+      Width = 1262
+      Height = 643
       Align = alClient
       Columns = <>
       Font.Charset = RUSSIAN_CHARSET
@@ -39,8 +41,305 @@ object FormTranslators: TFormTranslators
       ReadOnly = True
       RowSelect = True
       ParentFont = False
+      PopupMenu = pmTranslators
       TabOrder = 0
       ViewStyle = vsReport
+      ExplicitWidth = 1098
+      ExplicitHeight = 601
+    end
+    object PanelTranslator: TPanel
+      Left = 207
+      Top = 15
+      Width = 362
+      Height = 594
+      TabOrder = 1
+      Visible = False
+      object lblCaption: TLabel
+        Left = 42
+        Top = 4
+        Width = 261
+        Height = 19
+        Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077' '#1085#1086#1074#1086#1075#1086' '#1087#1077#1088#1077#1074#1086#1076#1095#1080#1082#1072
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Consolas'
+        Font.Style = [fsItalic]
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 20
+        Top = 225
+        Width = 56
+        Height = 15
+        Caption = #1058#1077#1084#1072#1090#1080#1082#1072
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Consolas'
+        Font.Style = [fsItalic]
+        ParentFont = False
+      end
+      object Label3: TLabel
+        Left = 20
+        Top = 147
+        Width = 14
+        Height = 14
+        Caption = '+7'
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Consolas'
+        Font.Style = []
+        ParentFont = False
+      end
+      object TLabel
+        Left = 20
+        Top = 129
+        Width = 49
+        Height = 15
+        Caption = #1058#1077#1083#1077#1092#1086#1085
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Consolas'
+        Font.Style = [fsItalic]
+        ParentFont = False
+      end
+      object Label5: TLabel
+        Left = 20
+        Top = 332
+        Width = 35
+        Height = 15
+        Caption = #1071#1079#1099#1082#1080
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Consolas'
+        Font.Style = [fsItalic]
+        ParentFont = False
+      end
+      object ledName: TLabeledEdit
+        Left = 20
+        Top = 46
+        Width = 302
+        Height = 27
+        EditLabel.Width = 21
+        EditLabel.Height = 15
+        EditLabel.Caption = #1048#1084#1103
+        EditLabel.Font.Charset = RUSSIAN_CHARSET
+        EditLabel.Font.Color = clWindowText
+        EditLabel.Font.Height = -13
+        EditLabel.Font.Name = 'Consolas'
+        EditLabel.Font.Style = [fsItalic]
+        EditLabel.ParentFont = False
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Consolas'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+      end
+      object ledSurname: TLabeledEdit
+        Left = 20
+        Top = 94
+        Width = 302
+        Height = 27
+        EditLabel.Width = 49
+        EditLabel.Height = 15
+        EditLabel.Caption = #1060#1072#1084#1080#1083#1080#1103
+        EditLabel.Font.Charset = RUSSIAN_CHARSET
+        EditLabel.Font.Color = clWindowText
+        EditLabel.Font.Height = -13
+        EditLabel.Font.Name = 'Consolas'
+        EditLabel.Font.Style = [fsItalic]
+        EditLabel.ParentFont = False
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Consolas'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 2
+      end
+      object ledEmail: TLabeledEdit
+        Left = 20
+        Top = 189
+        Width = 302
+        Height = 27
+        EditLabel.Width = 35
+        EditLabel.Height = 15
+        EditLabel.Caption = #1055#1086#1095#1090#1072
+        EditLabel.Font.Charset = RUSSIAN_CHARSET
+        EditLabel.Font.Color = clWindowText
+        EditLabel.Font.Height = -13
+        EditLabel.Font.Name = 'Consolas'
+        EditLabel.Font.Style = [fsItalic]
+        EditLabel.ParentFont = False
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Consolas'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 4
+      end
+      object btnAdd: TButton
+        Left = 30
+        Top = 539
+        Width = 125
+        Height = 34
+        Cursor = crHandPoint
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Consolas'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 10
+      end
+      object ledUsername: TLabeledEdit
+        Left = 20
+        Top = 449
+        Width = 302
+        Height = 27
+        EditLabel.Width = 35
+        EditLabel.Height = 15
+        EditLabel.Caption = #1051#1086#1075#1080#1085
+        EditLabel.Font.Charset = RUSSIAN_CHARSET
+        EditLabel.Font.Color = clWindowText
+        EditLabel.Font.Height = -13
+        EditLabel.Font.Name = 'Consolas'
+        EditLabel.Font.Style = [fsItalic]
+        EditLabel.ParentFont = False
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Consolas'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 7
+      end
+      object ledPassword: TLabeledEdit
+        Left = 20
+        Top = 497
+        Width = 302
+        Height = 27
+        EditLabel.Width = 42
+        EditLabel.Height = 15
+        EditLabel.Caption = #1055#1072#1088#1086#1083#1100
+        EditLabel.Font.Charset = RUSSIAN_CHARSET
+        EditLabel.Font.Color = clWindowText
+        EditLabel.Font.Height = -13
+        EditLabel.Font.Name = 'Consolas'
+        EditLabel.Font.Style = [fsItalic]
+        EditLabel.ParentFont = False
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Consolas'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 8
+      end
+      object lbTrsDirecs: TListBox
+        Left = 20
+        Top = 265
+        Width = 273
+        Height = 56
+        ItemHeight = 13
+        TabOrder = 11
+      end
+      object btnAddDirection: TButton
+        Left = 296
+        Top = 242
+        Width = 26
+        Height = 21
+        Caption = '+'
+        TabOrder = 9
+      end
+      object cbTrDirect: TComboBox
+        Left = 20
+        Top = 242
+        Width = 273
+        Height = 21
+        TabOrder = 5
+        Text = #1058#1077#1084#1072#1090#1080#1082#1072
+      end
+      object ledPhone: TMaskEdit
+        Left = 41
+        Top = 144
+        Width = 281
+        Height = 23
+        EditMask = '!\(999\)000-0000;1;_'
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Consolas'
+        Font.Style = []
+        MaxLength = 13
+        ParentFont = False
+        TabOrder = 3
+        Text = '(   )   -    '
+      end
+      object lbTrsLangs: TListBox
+        Left = 20
+        Top = 370
+        Width = 273
+        Height = 56
+        ItemHeight = 13
+        TabOrder = 12
+      end
+      object cbTrLangs: TComboBox
+        Left = 20
+        Top = 347
+        Width = 273
+        Height = 21
+        TabOrder = 6
+        Text = #1071#1079#1099#1082#1080
+      end
+      object btnAddLanguage: TButton
+        Left = 296
+        Top = 347
+        Width = 26
+        Height = 21
+        Caption = '+'
+        TabOrder = 0
+      end
+      object Button2: TButton
+        Left = 296
+        Top = 280
+        Width = 26
+        Height = 21
+        Caption = '-'
+        TabOrder = 13
+      end
+      object Button3: TButton
+        Left = 296
+        Top = 384
+        Width = 26
+        Height = 21
+        Caption = '-'
+        TabOrder = 14
+      end
+      object btnCancel: TButton
+        Left = 187
+        Top = 539
+        Width = 125
+        Height = 34
+        Cursor = crHandPoint
+        Caption = #1054#1090#1084#1077#1085#1072
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Consolas'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 15
+        OnClick = btnCancelClick
+      end
     end
   end
   object TranslatorHttp: TIdHTTP
@@ -59,5 +358,21 @@ object FormTranslators: TFormTranslators
     HTTPOptions = [hoForceEncodeParams]
     Left = 840
     Top = 8
+  end
+  object pmTranslators: TPopupMenu
+    Left = 920
+    Top = 16
+    object N1: TMenuItem
+      Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+      OnClick = N1Click
+    end
+    object N2: TMenuItem
+      Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
+      OnClick = N2Click
+    end
+    object N3: TMenuItem
+      Caption = #1059#1076#1072#1083#1080#1090#1100
+      OnClick = N3Click
+    end
   end
 end

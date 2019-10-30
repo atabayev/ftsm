@@ -43,6 +43,7 @@ object FormMain: TFormMain
     object tbConnection: TToolButton
       Left = 0
       Top = 0
+      Cursor = crHandPoint
       Enabled = False
       ImageIndex = 0
       OnClick = tbConnectionClick
@@ -50,6 +51,7 @@ object FormMain: TFormMain
     object tbFinishOrder: TToolButton
       Left = 71
       Top = 0
+      Cursor = crHandPoint
       Enabled = False
       ImageIndex = 1
       OnClick = tbFinishOrderClick
@@ -66,6 +68,7 @@ object FormMain: TFormMain
     object tbTranslators: TToolButton
       Left = 161
       Top = 0
+      Cursor = crHandPoint
       Enabled = False
       ImageIndex = 2
       OnClick = tbTranslatorsClick
@@ -73,6 +76,7 @@ object FormMain: TFormMain
     object tbCustomers: TToolButton
       Left = 232
       Top = 0
+      Cursor = crHandPoint
       Enabled = False
       ImageIndex = 3
       OnClick = tbCustomersClick
@@ -80,6 +84,7 @@ object FormMain: TFormMain
     object ToolButton1: TToolButton
       Left = 303
       Top = 0
+      Cursor = crHandPoint
       Caption = 'ToolButton1'
       ImageIndex = 4
       OnClick = ToolButton1Click
@@ -546,6 +551,7 @@ object FormMain: TFormMain
           Top = 27
           Width = 70
           Height = 71
+          Cursor = crHandPoint
           Hint = #1047#1072#1082#1088#1099#1090#1100
           ImageIndex = 2
           Images = ilButtons
@@ -557,6 +563,7 @@ object FormMain: TFormMain
           Top = 140
           Width = 70
           Height = 71
+          Cursor = crHandPoint
           Hint = #1057#1082#1072#1095#1072#1090#1100' '#1092#1072#1081#1083#1099' '#1079#1072#1082#1072#1079#1072
           HotImageIndex = 1
           ImageIndex = 1
@@ -569,6 +576,7 @@ object FormMain: TFormMain
           Top = 256
           Width = 70
           Height = 71
+          Cursor = crHandPoint
           Hint = #1044#1072#1083#1077#1077
           HotImageIndex = 0
           ImageIndex = 0
@@ -642,12 +650,10 @@ object FormMain: TFormMain
     Width = 1343
     Height = 19
     Panels = <>
-    ExplicitLeft = -398
-    ExplicitTop = 789
   end
   object PanelAuth: TPanel
-    Left = 569
-    Top = 206
+    Left = 598
+    Top = 212
     Width = 428
     Height = 145
     TabOrder = 4
@@ -719,6 +725,7 @@ object FormMain: TFormMain
       Height = 25
       Caption = 'Button4'
       TabOrder = 3
+      Visible = False
       OnClick = Button4Click
     end
   end
@@ -865,6 +872,7 @@ object FormMain: TFormMain
       Top = 539
       Width = 196
       Height = 34
+      Cursor = crHandPoint
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText

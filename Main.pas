@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ToolWin, Vcl.ExtCtrls, IniFiles,
   System.ImageList, Vcl.ImgList, IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
-  Vcl.StdCtrls, IdMultipartFormData, System.JSON, Vcl.WinXPickers, ShellAPI, Vcl.Mask;
+  Vcl.StdCtrls, IdMultipartFormData, System.JSON, Vcl.WinXPickers, ShellAPI, Vcl.Mask,
+  Vcl.Menus;
 
 const
     INI_FILE = 'configs.ini';
@@ -725,6 +726,9 @@ begin
         dpDateFinish.Date:= Now;
         cbDirection.Enabled := True;
         edPriceToClient.Enabled := True;
+        edPriceToTranslator.Enabled := True;
+        cbTranslatinglang.Enabled := True;
+        edPages.Enabled := True;
     end
     else begin
         PanelAddTr.Visible := False;
@@ -1074,6 +1078,10 @@ begin
         MainTable.Canvas.Brush.Color:=clYellow
     else if Item.SubItems[15] = '2' then
         MainTable.Canvas.Brush.Color:= clOlive
+    else if Item.SubItems[15] = '25' then
+        MainTable.Canvas.Brush.Color:= clGradientInactiveCaption
+    else if Item.SubItems[15] = '26' then
+        MainTable.Canvas.Brush.Color:= clGradientInactiveCaption
     else if Item.SubItems[15] = '3' then
         MainTable.Canvas.Brush.Color:= clAqua
     else if Item.SubItems[15] = '4' then
@@ -1131,6 +1139,8 @@ end;
 
 procedure TFormMain.tbConnectionClick(Sender: TObject);
 begin
+    if MainTable.Items.Count = 0 then
+        Exit;
     if MainTable.Selected.SubItems.Strings[15] = '9' then
         IsNewOrder := False
     else
@@ -1196,6 +1206,8 @@ var
     ArchName: string;
     cmd: string;
 begin
+    if MainTable.Items.Count = 0 then
+        Exit;
     if (MainTable.Selected.SubItems.Strings[14] = '6') or
        (MainTable.Selected.SubItems.Strings[14] = '7') then begin
             MessageDlg('Заказ уже завершен!', mtError, [mbOK], 0);
